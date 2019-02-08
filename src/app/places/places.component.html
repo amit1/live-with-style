@@ -1,0 +1,31 @@
+<h1>List of places i have visited</h1>
+<ul>
+  <li *ngFor="let places of placelist">
+    {{places.place}}
+  </li>
+</ul>
+
+<div fxFlex fxFlexOffset="20px" class="form-size">
+  <h3>Send us your Feedback</h3>
+  <p>{{ placesForm.value | json }} {{ placesForm.status | json }}</p>
+
+  <form novalidate [formGroup]="placesForm" (ngSubmit)="onSubmit()">
+    <p>
+      <mat-form-field class="half-width">
+        <input matInput formControlName="place" placeholder="place name" type="text">
+      </mat-form-field>
+    </p>
+    <p>
+        <input id="photo" formControlName="image" placeholder="image path" type="file" (change)="onFileSelected($event)" multiple >
+        <button type="button" mat-button (click)="uploadImages">upload</button>
+       <!--<input type="file" name="userPhoto" multiple />--> 
+
+    </p>
+    <p>
+      <mat-form-field class="full-width">
+        <textarea matInput formControlName="description" placeholder="places description" rows=2></textarea>
+      </mat-form-field>
+    </p>
+    <button type="submit" mat-raised-button color="primary" [disabled]="placesForm.invalid || placesForm.prestine">Submit</button>
+  </form>
+</div>

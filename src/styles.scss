@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+// some basic resets 
+
+body { 
+  padding: 0; 
+  margin: 0;
+  font-family: cursive;
+}
+
+.mat-toolbar, .mat-toolbar h1, .mat-toolbar h2, .mat-toolbar h3, .mat-toolbar h4, .mat-toolbar h5, .mat-toolbar h6{
+  font-family: cursive;
+  font-size: 14px;
+}
+
+.mat-icon{
+  height: 14px !important;
+  width: 14px !important;
+}
+
+.container{
+  max-width: 1170px;
+  width: 100%;
+  margin: auto;
+}
