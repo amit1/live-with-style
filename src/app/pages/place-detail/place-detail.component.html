@@ -1,5 +1,14 @@
 <div class="container" fxLayout="column" fxLayoutGap="10px">
   <div fxFlex>
-    <img src="{{'https://picsum.photos/1170/400/?'+ placeId}}" />
+    <mat-card class="place-detail">
+      <img mat-card-img src="{{ 'https://picsum.photos/1170/400/?'+ placeName.place }}">
+      <mat-card-title>{{ placeName.place }}</mat-card-title>
+      <mat-card-subtitle></mat-card-subtitle>
+      <mat-card-content>
+          <p>
+          {{placeName.description}}
+          </p>
+        </mat-card-content>
+    </mat-card>
   </div>
 </div>

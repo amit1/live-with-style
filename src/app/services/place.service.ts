@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class PlaceService {
   url: string = 'http://localhost:3000/places';
   place: any;
+  onePlace: any;
   error: any;
 
   constructor(private http: HttpClient) { }
@@ -46,5 +47,10 @@ export class PlaceService {
   getPlaces(){
     return this.http.get(this.url)
     .pipe(map(place => this.place = place))   
+  }
+
+  getPlace(onePlace: string){
+    return this.http.get(this.url +'/' + onePlace)
+    .pipe(map(place => this.onePlace = place))
   }
 }

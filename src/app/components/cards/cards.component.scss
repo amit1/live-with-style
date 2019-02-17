@@ -1,5 +1,15 @@
 .material-cards {
-    max-width: 352px;
-    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  max-width: 340px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  display: inline-block;
+  margin: 10px 9px;
+
+  .mat-card-title{
+    text-transform: capitalize;
   }
+
+
+  }
+
+
+
